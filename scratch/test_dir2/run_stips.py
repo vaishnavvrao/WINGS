@@ -38,8 +38,8 @@ def hyak_stips(job_id,event_id,dp_id,stips_script):
               '## Job Name' + '\n'+
               '#SBATCH --job-name=stips'+str(dp_id) + '\n'+
               '## Allocation Definition ' + '\n'+
-              '#SBATCH --account=astro' + '\n'+
-              '#SBATCH --partition=astro' + '\n'+
+              '#SBATCH --account=ericbell0' + '\n'+
+              '#SBATCH --partition=standard' + '\n'+
               '## Resources' + '\n'+
               '## Nodes' + '\n'+
               '#SBATCH --ntasks=1' + '\n'+

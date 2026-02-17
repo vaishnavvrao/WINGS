@@ -203,8 +203,8 @@ if pathlib.Path(sys.argv[0]).resolve().name != 'wingspipe':
 #                 '## Job Name' + '\n' +
 #                 '#SBATCH --job-name=' + jidstr + '\n' +
 #                 '## Allocation Definition ' + '\n' +
-#                 '#SBATCH --account=astro' + '\n' +
-#                 '#SBATCH --partition=astro' + '\n' +
+#                 '#SBATCH --account=ericbell0' + '\n' +
+#                 '#SBATCH --partition=standard' + '\n' +
 #                 '## Resources' + '\n' +
 #                 '## Nodes' + '\n' +
 #                 '#SBATCH --ntasks=1' + '\n' +

@@ -16,8 +16,8 @@ __all__ = ['DEFAULT_NODE_MODEL', 'DEFAULT_WALLTIME', 'SlurmScheduler']
 
 DEFAULT_WALLTIME = '48:00:00'
 DEFAULT_MEMORY = '50G'
-DEFAULT_ACCOUNT = 'astro'
-DEFAULT_PARTITION = 'compute-bigmem'
+DEFAULT_ACCOUNT = 'ericbell0'
+DEFAULT_PARTITION = 'standard'
 DEFAULT_NCPUS = '1'
 DEFAULT_NODE_MODEL = 'has'
 NODE_CORES_DICT = {'bro': 2 * 14, 'has': 2 * 12, 'ivy': 2 * 10, 'san': 2 * 8}

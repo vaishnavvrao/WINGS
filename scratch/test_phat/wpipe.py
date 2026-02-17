@@ -536,8 +536,8 @@ def hyak(task,job_id,event_id):
               '## Job Name' + '\n'+
               '#SBATCH --job-name='+jidstr+'\n'+
               '## Allocation Definition ' + '\n'+
-              '#SBATCH --account=astro' + '\n'+
-              '#SBATCH --partition=astro' + '\n'+
+              '#SBATCH --account=ericbell0' + '\n'+
+              '#SBATCH --partition=standard' + '\n'+
               '## Resources' + '\n'+
               '## Nodes' + '\n'+
               '#SBATCH --ntasks=1' + '\n'+
@@ -570,7 +570,7 @@ def pbs(task,job_id,event_id):
     #print(event_id,job_id,executable,type(executable))
     eidstr = str(event_id)
     jidstr = str(job_id)
-    print("Submitting ",pbs)
+    print("Submitting ",pbsfile)
     #with open(pbsfile, 'w') as f:
     with open(pbsfile, 'a') as f:
         f.write(#'#PBS -S /bin/csh' + '\n'+
