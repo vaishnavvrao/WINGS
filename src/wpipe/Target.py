@@ -358,6 +358,7 @@ class Target(OptOwner):
         for confdp in self.input.confdataproducts:
             self.configuration(os.path.splitext(confdp.filename)[0],
                                parameters=json.load(open(confdp.relativepath+'/'+confdp.filename))[0], **kwargs)
+                               
 
     def remove_data(self):
         """
