@@ -29,10 +29,9 @@ __all__ = ['BASE_PORT', 'DEFAULT_PORT', 'checkSlurmConnection', 'sendJobToSlurm'
     #HOST_MACHINE = ip
 #else:
     #HOST_MACHINE = '10.64.57.84'
-HOST_MACHINE = '0.0.0.0'
-BASE_PORT = DEFAULT_PORT = 8030
-
-
+    #raise RuntimeError("Server address file not found.")
+HOST_MACHINE = '127.0.0.1'
+BASE_PORT = DEFAULT_PORT = 8000
 # HOST_MACHINE = '127.0.0.1' # For debugging
 
 # This processes incoming pickled pipeline objects
@@ -73,6 +72,7 @@ class PipelineObjectProtocol(asyncio.Protocol):
 
 def checkSlurmConnection():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    print("Checking connection to SlurmConsumer server on {}:{} ...".format(HOST_MACHINE, DEFAULT_PORT))
     connected = s.connect_ex((HOST_MACHINE, DEFAULT_PORT))
     s.close()
     logging.info("Checking connection: {} ...".format(connected))
