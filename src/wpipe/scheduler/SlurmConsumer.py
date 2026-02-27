@@ -72,7 +72,7 @@ class PipelineObjectProtocol(asyncio.Protocol):
 
 def checkSlurmConnection():
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    print("Checking connection to SlurmConsumer server on {}:{} ...".format(HOST_MACHINE, DEFAULT_PORT))
+    #print("Checking connection to SlurmConsumer server on {}:{} ...".format(HOST_MACHINE, DEFAULT_PORT))
     connected = s.connect_ex((HOST_MACHINE, DEFAULT_PORT))
     s.close()
     logging.info("Checking connection: {} ...".format(connected))
