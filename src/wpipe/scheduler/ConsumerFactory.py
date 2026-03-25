@@ -39,8 +39,8 @@ if __name__ == "__main__":
 
     print(f"Results of slurm and PBS test: PBS {which_pbs} & Slurm {which_slurm} ...\n")
 
-    #if which_pbs and which_slurm:
-        #print("WARNING: Found both PBS and Slurm... continuing with PBS...")
+    if which_pbs and which_slurm:
+        print("WARNING: Found both PBS and Slurm... continuing with PBS...")
 
     if which_pbs:
         print("We found PBS on this system ...")

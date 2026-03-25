@@ -6,8 +6,8 @@ def has_pbs_or_slurm() -> Tuple[bool, bool]:
     has_pbs = os.system("which qsub") == 0
     has_slurm = os.system("which sbatch") == 0
 
-    #if has_pbs and has_slurm:
-        #print("WARNING: Found both PBS and Slurm... continuing with PBS...")
+    if has_pbs and has_slurm:
+        print("WARNING: Found both PBS and Slurm... continuing with PBS...")
 
     return has_pbs, has_slurm
 
